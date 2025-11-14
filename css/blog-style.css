@@ -106,7 +106,7 @@ body {
 }
 
 .blog-container {
-  max-width: 85%;
+  max-width: 95%;
   width: 100%;
   margin: 0 auto;
   padding: 100px clamp(20px, 3vw, 40px) 60px;
