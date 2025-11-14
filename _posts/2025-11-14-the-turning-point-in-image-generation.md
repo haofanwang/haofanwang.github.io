@@ -8,6 +8,9 @@ permalink: /The-Turning-Point-in-Image-Generation/
 
 Inspired by OpenAI researcher Yao Shunyu's "The Second Half"[^1], I'd like to share some observations about the field of image generation. Compared to the still-distant AGI, image generation seems to be at a historic inflection point.
 
+"What I cannot create, I do not understand." Generative AI has been the most prominent field in the past few years, following image understanding. After a period of explosive growth, generated images have become virtually indistinguishable from real ones. Complex image editing tasks once confined to Photoshop are now accessible to ordinary users, and visual content creation has become easier than ever. Predictably, the performance of generative models will only continue to improve.
+
+So what's different now? Much like energy resources, we are facing an exhaustion of image-related tasks. Those that inherently existed or could be formed through combinations have largely been solved, while new tasks have yet to be clearly defined. The field of image generation is falling into this predicament.
 
 ## Recap: 2021-2025
 Rewinding the timeline five years, the research hotspots back then were vastly different from today. Many things that seem commonplace now were not so obvious then. Here are several key milestones in visual generation over the past five years that left a deep impression on me:
