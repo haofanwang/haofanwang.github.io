@@ -1,8 +1,9 @@
 ---
 layout: post
-title: 图像生成的转折点
+title: The Turning Point in Image Generation
 date: 2025-11-14
 author: Haofan Wang
+permalink: /The-Turning-Point-in-Image-Generation/
 ---
 
 # 图像生成的转折点

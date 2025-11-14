@@ -38,11 +38,6 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
-# 包含和排除
-include:
-  - posts
-  - documents
-
 exclude:
   - README.md
   - LICENSE
@@ -55,7 +50,7 @@ exclude:
 collections:
   posts:
     output: true
-    permalink: /posts/:title/
+    permalink: /:title/
 
 # 默认值
 defaults:
