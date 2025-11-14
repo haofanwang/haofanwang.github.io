@@ -16,7 +16,7 @@
 }
 
 .blog-nav-container {
-  max-width: 90%;
+  max-width: 95%;
   width: 100%;
   margin: 0 auto;
   padding: 0 clamp(20px, 3vw, 40px);
@@ -27,7 +27,13 @@
 
 @media (min-width: 1400px) {
   .blog-nav-container {
-    max-width: 1260px;
+    max-width: 1600px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .blog-nav-container {
+    max-width: 1800px;
   }
 }
 
@@ -114,7 +120,13 @@ body {
 
 @media (min-width: 1400px) {
   .blog-container {
-    max-width: 1150px;
+    max-width: 1600px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .blog-container {
+    max-width: 1800px;
   }
 }
 
@@ -126,14 +138,20 @@ body {
 
 .blog-post {
   background: white;
-  padding: clamp(40px, 5vh, 60px) clamp(40px, 6vw, 100px);
+  padding: clamp(40px, 5vh, 60px) clamp(30px, 4vw, 60px);
   border-radius: 2px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
 @media (min-width: 1600px) {
   .blog-post {
-    padding: 60px 120px;
+    padding: 60px 80px;
+  }
+}
+
+@media (min-width: 2000px) {
+  .blog-post {
+    padding: 60px 100px;
   }
 }
 
