@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Welcome to My Blog",
+    "date": "2025-11-14",
+    "author": "Haofan Wang",
+    "excerpt": "Welcome to my personal blog! Here I will share my thoughts, experiences, and insights on topics related to AI, machine learning, computer vision, and generative models.",
+    "file": "welcome.md",
+    "tags": ["introduction", "general"]
+  },
+  {
+    "title": "Understanding Diffusion Models: A Practical Introduction",
+    "date": "2025-11-10",
+    "author": "Haofan Wang",
+    "excerpt": "Diffusion models have revolutionized the field of generative AI, powering applications like DALL-E, Stable Diffusion, and Midjourney. Learn about the fundamentals of how they work.",
+    "file": "diffusion-models-intro.md",
+    "tags": ["diffusion models", "generative AI", "technical"]
+  },
+  {
+    "title": "The Journey of Building InstantID",
+    "date": "2025-11-05",
+    "author": "Haofan Wang",
+    "excerpt": "Building InstantID was an exciting journey that combined deep learning, computer vision, and practical product development. In this post, I'll share some insights from the development process.",
+    "file": "instantid-journey.md",
+    "tags": ["InstantID", "product development", "computer vision"]
+  }
+]
+

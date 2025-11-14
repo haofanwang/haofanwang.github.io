@@ -1,3 +1,2 @@
-My personal website.
-
+# Haofan Wang - Personal Website
 Modified from © Pingchuan Ma

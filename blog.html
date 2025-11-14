@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Haofan Wang's Blog">
+    <meta name="author" content="Haofan Wang">
+
+    <!-- favicon -->
+    <link href="favicon.png" rel=icon>
+
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-104092499-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <!-- End Google Analytics -->
+
+    <!-- bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- font-awesome -->
+    <link href="css/fontawesome.min.css" rel="stylesheet">
+    <link href="css/solid.min.css" rel="stylesheet">
+    <link href="css/brands.min.css" rel="stylesheet">
+
+    <!-- academicons -->
+    <link href="css/academicons.min.css" rel="stylesheet">
+
+    <!-- Style CSS -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+      .blog-wrapper {
+        padding: 100px 0 50px 0;
+      }
+      
+      .blog-item {
+        margin-bottom: 40px;
+        padding: 30px;
+        background: #f8f9fa;
+        border-radius: 8px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      
+      .blog-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      }
+      
+      .blog-title {
+        font-size: 1.8em;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      
+      .blog-title a {
+        color: #333;
+        text-decoration: none;
+      }
+      
+      .blog-title a:hover {
+        color: #007bff;
+      }
+      
+      .blog-meta {
+        color: #666;
+        font-size: 0.9em;
+        margin-bottom: 15px;
+      }
+      
+      .blog-excerpt {
+        color: #555;
+        line-height: 1.6;
+      }
+      
+      .read-more {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      
+      .read-more:hover {
+        text-decoration: underline;
+      }
+    </style>
+
+    <title>Blog - Haofan Wang</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-sm navbar-dark fixed-top">
+        <!-- Navbar content -->
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"><serif>Haofan Wang</serif></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-item nav-link" href="index.html#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-item nav-link" href="index.html#bio">Biography</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-item nav-link" href="index.html#pub">Publications</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-item nav-link active" href="blog.html">Blog</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  More
+                </a>
+                <div class="dropdown-menu dropdown-menu-right dropdown-menu-xl-left" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="index.html#Teaching">Teaching</a>
+                  <a class="dropdown-item" href="index.html#Services">Services</a>
+                  <a class="dropdown-item" href="index.html#career">Career</a>
+                  <a class="dropdown-item" href="index.html#misc">Misc</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="blog-wrapper">
+        <div class="container">
+          <div class="row">
+            <div class="col col-wrapper">
+              <div class="section-title">Blog</div>
+            </div>
+          </div>
+          
+          <div id="blog-list" class="row">
+            <!-- Blog posts will be loaded here dynamically -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Bootstrap JS -->
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <!-- Popper before Bootstrap -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+      // Blog posts metadata
+      const blogPosts = [
+        {
+          title: "Welcome to My Blog",
+          date: "2025-11-14",
+          author: "Haofan Wang",
+          excerpt: "Welcome to my personal blog! Here I will share my thoughts, experiences, and insights on topics related to AI, machine learning, computer vision, and generative models.",
+          file: "welcome.md"
+        },
+        {
+          title: "Understanding Diffusion Models: A Practical Introduction",
+          date: "2025-11-10",
+          author: "Haofan Wang",
+          excerpt: "Diffusion models have revolutionized the field of generative AI, powering applications like DALL-E, Stable Diffusion, and Midjourney. Learn about the fundamentals of how they work.",
+          file: "diffusion-models-intro.md"
+        },
+        {
+          title: "The Journey of Building InstantID",
+          date: "2025-11-05",
+          author: "Haofan Wang",
+          excerpt: "Building InstantID was an exciting journey that combined deep learning, computer vision, and practical product development. In this post, I'll share some insights from the development process.",
+          file: "instantid-journey.md"
+        }
+      ];
+
+      // Sort posts by date (newest first)
+      blogPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+      // Generate blog list
+      const blogList = document.getElementById('blog-list');
+      blogPosts.forEach(post => {
+        const postSlug = post.file.replace('.md', '');
+        const blogItem = `
+          <div class="col-12">
+            <div class="blog-item">
+              <div class="blog-title">
+                <a href="post.html?post=${postSlug}">${post.title}</a>
+              </div>
+              <div class="blog-meta">
+                <i class="far fa-calendar"></i> ${post.date} | <i class="far fa-user"></i> ${post.author}
+              </div>
+              <div class="blog-excerpt">
+                ${post.excerpt}
+              </div>
+              <div style="margin-top: 15px;">
+                <a href="post.html?post=${postSlug}" class="read-more">Read More →</a>
+              </div>
+            </div>
+          </div>
+        `;
+        blogList.innerHTML += blogItem;
+      });
+    </script>
+  </body>
+</html>
+
