@@ -1,3 +1,21 @@
+#
+# This file contains configuration flags to customize your site
+#
+
+# Name of your site (displayed in the header)
+name: Haofan Wang
+
+# Short bio or description (displayed in the header)
+description: 王浩帆
+
+# Includes an icon in the footer for each username you enter
+footer-links:
+  email: haofanwang.ai@gmail.com
+  googlescholar: EaMsuB0AAAAJ
+  github: haofanwang
+  linkedin: haofan-frank-wang-366782130
+  twitter: Haofan_Wang
+
 # GitHub Pages Configuration
 # 包含 posts 目录（让 GitHub Pages 可以访问）
 include:
@@ -7,4 +25,3 @@ include:
 exclude:
   - README.md
   - LICENSE
-
