@@ -1,51 +1,12 @@
-# Jekyll 配置文件
+# GitHub Pages Configuration
+# 启用 404.html 作为自定义 404 页面
+permalink: /:title/
 
-# 网站基本信息
-name: Haofan Wang
-description: 个人主页
-avatar: /images/luffy.jpg
+# 不使用 Jekyll 主题
+theme: null
 
-# URL 设置
-url: https://haofanwang.github.io
-baseurl: ""
-
-# Permalink 设置 - 让文章可以通过 /xxx 访问
-permalink: /:title
-
-# Markdown 处理器
-markdown: kramdown
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
-
-# 插件
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-
-# 排除的文件
+# 排除不需要处理的文件
 exclude:
-  - Gemfile
-  - Gemfile.lock
-  - LICENSE
   - README.md
-  - CNAME
-
-# 集合配置 - 如果你想要使用集合
-collections:
-  posts:
-    output: true
-    permalink: /:title
-
-# 默认值
-defaults:
-  - scope:
-      path: "posts"
-      type: "posts"
-    values:
-      layout: "post"
-  - scope:
-      path: "posts/*.md"
-    values:
-      layout: "post"
+  - LICENSE
 
