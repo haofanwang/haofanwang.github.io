@@ -5,8 +5,13 @@ permalink: /:title/
 # 不使用 Jekyll 主题
 theme: null
 
+# 包含 posts 目录（让 GitHub Pages 可以访问）
+include:
+  - posts
+
 # 排除不需要处理的文件
 exclude:
   - README.md
   - LICENSE
+  - BLOG_README.md
 

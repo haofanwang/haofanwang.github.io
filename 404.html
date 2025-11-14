@@ -192,7 +192,7 @@
         `;
       } else {
         // 加载 Markdown 文件
-        fetch(`/_posts/${postName}.md`)
+        fetch(`/posts/${postName}.md`)
           .then(response => {
             if (!response.ok) {
               throw new Error('文章不存在');
