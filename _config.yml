@@ -1,10 +1,4 @@
 # GitHub Pages Configuration
-# 启用 404.html 作为自定义 404 页面
-permalink: /:title/
-
-# 不使用 Jekyll 主题
-theme: null
-
 # 包含 posts 目录（让 GitHub Pages 可以访问）
 include:
   - posts
@@ -13,5 +7,4 @@ include:
 exclude:
   - README.md
   - LICENSE
-  - BLOG_README.md
 
