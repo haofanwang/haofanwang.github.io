@@ -1,27 +1,72 @@
 #
-# This file contains configuration flags to customize your site
+# Jekyll 配置文件
 #
 
-# Name of your site (displayed in the header)
+# 网站基本信息
+title: Haofan Wang
 name: Haofan Wang
-
-# Short bio or description (displayed in the header)
 description: 王浩帆
+email: haofanwang.ai@gmail.com
 
-# Includes an icon in the footer for each username you enter
-footer-links:
+# 作者信息
+author:
+  name: Haofan Wang
+  name_zh: 王浩帆
   email: haofanwang.ai@gmail.com
+  school_email: haofanw@alumni.cmu.edu
+
+# 社交媒体链接
+social:
   googlescholar: EaMsuB0AAAAJ
   github: haofanwang
   linkedin: haofan-frank-wang-366782130
   twitter: Haofan_Wang
+  huggingface: wanghaofan
 
-# GitHub Pages Configuration
-# 包含 posts 目录（让 GitHub Pages 可以访问）
+# 网站设置
+baseurl: "" # 子路径，如 /blog
+url: "https://haofanwang.github.io" # 你的网站 URL
+
+# 构建设置
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# 插件
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# 包含和排除
 include:
   - posts
+  - documents
 
-# 排除不需要处理的文件
 exclude:
   - README.md
   - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# 集合配置（用于博客文章）
+collections:
+  posts:
+    output: true
+    permalink: /posts/:title/
+
+# 默认值
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Haofan Wang"
+
+# 其他设置
+timezone: America/New_York
+encoding: utf-8
+

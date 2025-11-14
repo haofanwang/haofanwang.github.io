@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="{{ page.title }} - {{ site.author.name }}">
+    <meta name="author" content="{{ site.author.name }}">
+
+    <!-- favicon -->
+    <link href="{{ site.baseurl }}/favicon.png" rel=icon>
+
+    <!-- bootstrap -->
+    <link href="{{ site.baseurl }}/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- font-awesome -->
+    <link href="{{ site.baseurl }}/css/fontawesome.min.css" rel="stylesheet">
+    <link href="{{ site.baseurl }}/css/solid.min.css" rel="stylesheet">
+    <link href="{{ site.baseurl }}/css/brands.min.css" rel="stylesheet">
+
+    <!-- academicons -->
+    <link href="{{ site.baseurl }}/css/academicons.min.css" rel="stylesheet">
+
+    <!-- Style CSS -->
+    <link href="{{ site.baseurl }}/css/style.css" rel="stylesheet">
+    <link href="{{ site.baseurl }}/css/blog-style.css" rel="stylesheet">
+
+    <title>{{ page.title }} - {{ site.title }}</title>
+  </head>
+  <body>
+    <!-- Fixed Top Navigation Bar -->
+    <nav class="blog-navbar">
+      <div class="blog-nav-container">
+        <div class="blog-nav-left">
+          <a href="{{ site.baseurl }}/index.html" class="blog-nav-name">
+            <span class="name-en">{{ site.author.name }}</span>
+            <span class="name-divider">|</span>
+            <span class="name-zh">{{ site.author.name_zh }}</span>
+          </a>
+        </div>
+        <div class="blog-nav-right">
+          <ul class="blog-nav-icons">
+            <li><a title="Google Scholar" href="https://scholar.google.com/citations?hl=en&user={{ site.social.googlescholar }}" target="_blank"><i class="ai ai-google-scholar"></i></a></li>
+            <li><a title="Github" href="https://github.com/{{ site.social.github }}" target="_blank"><i class="fab fa-github"></i></a></li>
+            <li><a title="Twitter" href="https://twitter.com/{{ site.social.twitter }}" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li><a title="Linkedin" href="https://www.linkedin.com/in/{{ site.social.linkedin }}/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Blog Content -->
+    <div class="blog-container">
+      <article class="blog-post">
+        <h1 class="blog-title">{{ page.title }}</h1>
+        <div class="blog-meta">
+          <time datetime="{{ page.date | date: '%Y-%m-%d' }}">Written on {{ page.date | date: "%B %d, %Y" }}</time>
+        </div>
+
+        <div class="blog-content">
+          {{ content }}
+        </div>
+      </article>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <script src="{{ site.baseurl }}/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="{{ site.baseurl }}/js/popper.min.js"></script>
+    <script src="{{ site.baseurl }}/js/bootstrap.min.js"></script>
+  </body>
+</html>
+
