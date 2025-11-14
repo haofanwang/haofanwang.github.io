@@ -6,45 +6,47 @@ author: Haofan Wang
 permalink: /The-Turning-Point-in-Image-Generation/
 ---
 
-# 图像生成的转折点
+Inspired by OpenAI researcher Yao Shunyu's "The Second Half"[^1], I'd like to share some observations about the field of image generation. Compared to the still-distant AGI, image generation seems to be at a historic inflection point.
 
-这是关于图像生成技术发展的文章。你可以使用 Markdown 语法来编写文章内容。
 
-## 技术发展历程
+## Recap: 2021-2025
+Rewinding the timeline five years, the research hotspots back then were vastly different from today. Many things that seem commonplace now were not so obvious then. Here are several key milestones in visual generation over the past five years that left a deep impression on me:
 
-近年来,图像生成技术经历了巨大的变革：
+### CLIP Ushered in the Era of Multimodality
+Before 2020, visual research was mostly confined to closed datasets like ImageNet, performing specific tasks like classification and detection through supervised learning. CV and NLP were almost entirely separate fields. This changed with the release of CLIP in early 2021. Using contrastive learning, it aligned images and text into a shared representation space, freeing image classification from predefined categories. CLIP opened the era of vision-language pre-training, and its core ideas of "large-scale pre-training" and "multimodal alignment" remain influential today. Simultaneously, the VIT architecture adopted by CLIP gradually replaced CNN as the foundational paradigm.
 
-- **GAN 时代**：生成对抗网络开启了图像生成的新纪元
-- **Diffusion Models**：扩散模型带来了更稳定的训练和更高质量的生成
-- **Transformer 架构**：注意力机制在图像生成中的应用
+### Generative AI and Stable Diffusion
+2022 is now called the first year of Generative AI. Early Disco Diffusion was perhaps the first glimmer of dawn; it used CLIP to guide diffusion models, allowing arbitrary text to generate artistic images. Although slow and producing rough results, it pointed the way. Then, the work that truly ignited the wave – Stable Diffusion – arrived. Its success stemmed not only from significantly improved results and being fully open-source but, more importantly, from igniting the passion of the global community. Downstream innovations like LoRA, ControlNet, IP-Adapter, and InstantID sprang up like mushrooms after rain, attracting a massive number of developers, artists, and designers to participate, and also fueling the growth of communities like Huggingface and ComfyUI. During this phase, open-source, personalization, and controllable generation were the main themes.
 
-## 关键技术
+### Waning Enthusiasm and Shifting Focus
+Things began to change in early 2024, although video models like AnimateDiff had already emerged before. The release of Sora in February truly demonstrated the initial effectiveness of scaling up computation for video generation. Meanwhile, progress in image generation continued, but community enthusiasm seemed to be waning. When SD3.5 failed to meet expectations and FLUX was released in August, despite its significant leap in text rendering, the atmosphere was different – judging by the number of downstream models, the community didn't embrace it as fervently as it did Stable Diffusion. FLUX itself also had issues like multilingual rendering and long-text understanding. Several major works following it aimed to address FLUX's shortcomings; for instance, Kontext/In Context used a more general reference image injection paradigm, and Qwen-Image began replacing the text encoder with an MLLM. But I realized that the previously active generation of researchers had begun turning to the new frontier of video generation. At the same time, the ballooning size of models made it difficult for individual developers to participate, and new foundational models natively integrated many capabilities that previously required plugins. Few "uncharted territories" remained in image generation, and the community fell into a fatigue of repetitive work – it no longer felt as fun and attractive as before.
 
-### Stable Diffusion
+## The Bitter Fact
+### The Low-hanging Fruit is Gone
+Generative AI is becoming as taken-for-granted as face recognition. Most core tasks have been largely solved, and achieving another industry-shaking breakthrough is by no means easy. The release of Nano Banana in August 2025 marked the end of the old research paradigm – previously independent downstream tasks like image editing, image referencing, and visual reasoning are being unified and internalized into foundational models. There's nothing wrong with this change per se, right? But imagine a PhD student who started in 2021: they might have worked on vision-language alignment or self-supervised representation learning in their first year, spent their second and third years training various vertical-specific models based on diffusion models, and in their fourth year, they might have started pondering what's next for images while also dabbling in video generation. By the time they graduate this year, much of their work over the past few years might already be obsolete. This pace of iteration has far exceeded expectations.
 
-Stable Diffusion 是一个开源的文本到图像生成模型，具有以下特点：
+Last month, Llion Jones, one of the authors of the Transformer, admitted in a talk that current model architectures have stagnated, which might be hindering the next breakthrough. It feels like we're repeating past mistakes – piling trivial "innovations" onto existing architectures, cobbling together three contributions to produce a standard paper. It's all becoming rather dull. If you work in visual generation, try this quick quiz: In the past six months, which work truly impressed you? If AGI is the grander, more difficult goal that can still guide LLM/VLM research, then visual generation tasks, perhaps precisely because they are "not difficult enough," are hitting a ceiling in the short term. Today, expecting a resurgence of the vibrant, blossoming diversity seen in 2023 is probably unrealistic.
 
-```python
-from diffusers import StableDiffusionPipeline
+### Scaling Depicts a Pessimistic Future
+If we believe in Scaling Law, its returns obviously haven't shown signs of fatigue yet. But this paints a rather pessimistic picture for researchers: when we have a simple, scalable architecture like the Transformer, and when continuously adding data and compute steadily improves model performance, where is the value of research? If the capability boundaries of foundational models keep expanding, covering the vast majority of downstream tasks, then what is the purpose of vertical-specific models? Scaling sounds increasingly like an engineering problem, not a research problem. "Computation is Intelligence" seems to be becoming a reality, although there are dissenting voices – concerning data efficiency and what happens if we eventually run out of high-quality data.
 
-# 加载模型
-pipe = StableDiffusionPipeline.from_pretrained("runwayml/stable-diffusion-v1-5")
+### Look Ahead, Don't Carry Any Burdens
+Image generation will likely evolve into image understanding, right? So, perhaps the only thing we can do now is to look forward without being burdened by the past, especially if you've already produced representative work in this wave of generative AI. We need to accept this fact: assuming AGI is ultimately realized, 99% of human work might be rendered meaningless.
 
-# 生成图像
-image = pipe("A beautiful sunset over the ocean").images[0]
-```
+## We're in Turning Point Now
+### The Open-Source Community Needs Foundational Models Comparable to Closed-Source
+Stable Diffusion's success demonstrated the creativity of the open-source ecosystem. However, over the past year, closed-source models have significantly pulled ahead in performance, making research based on the previous generation of open-source models seem inadequate. Before model capabilities converge, the community urgently needs open-source foundational models with comparable performance. This might involve unifying image-video frameworks or achieving interleaved image-text generation under an autoregressive framework. Teams engaged in foundational model research or open-source development still have a chance to succeed. But the winner-takes-most dynamic means that models outside the top tier will struggle to gain community traction. Yet, this is undoubtedly an arms race for tech giants; without sufficient compute resources, it's hard to even enter the fray.
 
-### InstantID 和 InstantStyle
+### Defining New Tasks Will Become More Valuable
+For AI application companies, whether a model is open-source will become less critical. The real value lies in: how target users can use it in specific scenarios. Previously, we made breakthroughs around tasks like "stylization," "face preservation," and "text rendering." The next step is to discover and define new tasks. This is by no means easy, as it requires keen insight into users' deeper needs and pain points. For example, FIBO uses structured inputs to train models, enabling precise control over lighting, composition, and color. Kontinuous Kontext achieves continuous control over edit strength in instruction-based editing. MotionStream introduces motion control for real-time video generation. These works themselves might not be overly complex, but by defining new input and interaction forms, they open up new avenues of thought.
 
-这些是我们团队开发的创新技术，用于：
+### Model as Product: The Shift from Researcher to Product Manager
+In the future, the line between researcher and product manager will blur, with research directions and product requirements becoming more tightly integrated. A good researcher must also be a good product manager. Reve introduced regional control, allowing users to seamlessly manipulate object positions using bounding boxes. Sora2's Cameo achieves multi-shot scenes, audio-visual synchronization, and cross-shot character consistency – capabilities deeply intertwined with the product form. Our team's exploration in Layered Image Editing follows the same logic: starting from users' real habits in design scenarios (like modifying template layers in Canva), which in turn drives us to find technical solutions. This might become the future research paradigm: before training even begins, collaborate with product teams to plan which features are worth internalizing, consciously collect data for them, and build differentiated capabilities into commercial "silver bullets." Creativity is paramount.
 
-1. **身份保持**：在生成过程中保持人物身份特征
-2. **风格迁移**：快速应用不同的艺术风格
-3. **高效生成**：在几秒内完成高质量图像生成
+"Is the feast of image generation over? Where do we go from here?" This is the question I've been pondering since the release of Nano Banana in August. Nano Banana 2 and FLUX 2 are coming soon, representing the state-of-the-art in closed-source and open-source, respectively. The evolution hasn't stopped.
 
-## 未来展望
+Finally, I'd like to end with a quote from Churchill: Now this is not the end. It is not even the beginning of the end. But it is, perhaps, the end of the beginning.
 
-图像生成技术将继续发展，我们期待看到更多激动人心的应用。
 
-更多技术细节请访问我的 [GitHub](https://github.com/haofanwang)。
-
+## References
+[^1]: Yao Shunyu. "The Second Half". https://ysymyth.github.io/The-Second-Half/
